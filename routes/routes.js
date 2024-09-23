@@ -1,6 +1,11 @@
 const express = require('express');
-const routes = express.Router();
-const KingController = require('../controller/KingController');
-routes.get('/', KingController.index);
+const router = express.Router();
+const Controller = require('../controller/KingController');
 
-module.exports = routes;
+router.get('/', Controller.first);
+router.get('/second', Controller.second);
+router.get('/third', Controller.third);
+router.get('/fourth', Controller.fourth);
+router.get('/fifth', Controller.fifth);
+
+module.exports = router;

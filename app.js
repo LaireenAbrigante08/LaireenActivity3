@@ -1,12 +1,15 @@
 const express = require('express');
-const routes = require('./routes/routes');
-//const views = require('./views/views');
+const bodyParser = require('body-parser');
+const Router = require('./routes/routes'); 
+
 const app = express();
+
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/' , routes);
+app.use('/', Router); 
+app.use(express.static('public'));
 
-
-app.listen(3000, ()=>{
-    console.log('server running on http://localhost:3000');
+app.listen(3003, () => {
+    console.log('Server initialized on http://localhost:3003');
 });

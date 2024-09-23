@@ -1,6 +1,19 @@
-const main = {
-    index:(req, res) =>{
-        res.render('index');
+const Controller = {
+    first: (req, res) => {
+        res.render('index', { message: 'Hi im Laireen' });
+    },
+    second: (req, res) => {
+        res.render('index', { message: 'Hi im Mae' });
+    },
+    third: (req, res) => {
+        res.render('index', { message: 'Hi im ALias' });
+    },
+    fourth: (req, res) => {
+        res.render('index', { message: 'Hi im Abrigante' });
+    },
+    fifth: (req, res) => {
+        res.render('index', { message: 'Hi im BSIT 3F3' });
     }
-}
-module.exports = main;
+};
+
+module.exports = Controller;
